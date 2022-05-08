@@ -1,0 +1,8 @@
+Blueprints.sbc
+	All refining reduced to 60% of base, Uranium reduced to 10%
+
+Data\CubeBlocks_Production.sbc
+	IcetoGas ratio for Oxygen production reduced to 0.1 from 10
+        Power consumption increased
+        Big refineries can not refine stone
+        Double output of oxygen farms
