@@ -1,95 +1,95 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <BlueprintClasses>
+	<BlueprintClasses>
 
-    <Class>
-      <Id>                   
-        <TypeId>BlueprintClassDefinition</TypeId>
-        <SubtypeId>RefineryIngots</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
-      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
-      <HighlightIcon>Textures\GUI\Icons\ingot\ingot_class.dds</HighlightIcon>
-      <InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
-      <OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
-    </Class>
+		<Class>
+			<Id>                   
+				<TypeId>BlueprintClassDefinition</TypeId>
+				<SubtypeId>RefineryIngots</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+			<Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+			<HighlightIcon>Textures\GUI\Icons\ingot\ingot_class.dds</HighlightIcon>
+			<InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
+			<OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
+		</Class>
 
-  </BlueprintClasses>
-  <BlueprintClassEntries>
+	</BlueprintClasses>
+	<BlueprintClassEntries>
 
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="IronOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="ScrapToIronIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="ScrapIngotToIronIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="NickelOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="CobaltOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="MagnesiumOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="SiliconOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="SilverOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="GoldOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="PlatinumOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="UraniumOreToIngot" />
-	
-	
-<!-- Aww Scrap Compatibility -->	
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="IronOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="ScrapToIronIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="ScrapIngotToIronIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="NickelOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="CobaltOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="MagnesiumOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="SiliconOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="SilverOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="GoldOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="PlatinumOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="UraniumOreToIngot" />
 
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="BulletproofGlassToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="ComputerToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="ConstructionToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="DetectorToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="DisplayToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="ExplosivesToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="GirderToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="GravityGeneratorToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="InteriorPlateToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="LargeTubeToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="MedicalToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="MetalGridToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="MotorToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="PowerCellToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="RadioCommunicationToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="ReactorToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="SmallTubeToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="SolarCellToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="SteelPlateToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="SuperconductorToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="ThrustToIngot" />
-	
-<!-- Daily Needs Compatibility -->
-	
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="CarbonOreToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="PotassiumOreToIngot" />
-	<Entry Class="RefineryIngots" BlueprintSubtypeId="PhosphorusOreToIngot" />
-	
-<!-- Better Stone Compatibility -->
 
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="BS_IcyIronOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="BS_DenseIronOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="HapkeiteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="HeazlewooditeOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="PorphyryOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="DolomiteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="CattieriteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="NiggliiteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="CarnotiteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="GlaucodotOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="SinoiteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="PyriteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="OlivineOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="CooperiteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="QuartzOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="GalenaOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="ChlorargyriteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="ElectrumOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="SperryliteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="AutuniteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="AkimotoiteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="WadsleyiteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="TaeniteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="CoheniteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="KamaciteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="UraniauriteOreToIngot" />
-    <Entry Class="RefineryIngots" BlueprintSubtypeId="PetziteOreToIngot" />	
-	
+		<!-- Aww Scrap Compatibility -->	
 
-  </BlueprintClassEntries>
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="BulletproofGlassToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="ComputerToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="ConstructionToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="DetectorToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="DisplayToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="ExplosivesToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="GirderToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="GravityGeneratorToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="InteriorPlateToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="LargeTubeToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="MedicalToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="MetalGridToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="MotorToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="PowerCellToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="RadioCommunicationToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="ReactorToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="SmallTubeToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="SolarCellToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="SteelPlateToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="SuperconductorToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="ThrustToIngot" />
+
+		<!-- Daily Needs Compatibility -->
+
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="CarbonOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="PotassiumOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="PhosphorusOreToIngot" />
+
+		<!-- Better Stone Compatibility -->
+
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="BS_IcyIronOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="BS_DenseIronOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="HapkeiteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="HeazlewooditeOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="PorphyryOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="DolomiteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="CattieriteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="NiggliiteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="CarnotiteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="GlaucodotOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="SinoiteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="PyriteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="OlivineOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="CooperiteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="QuartzOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="GalenaOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="ChlorargyriteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="ElectrumOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="SperryliteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="AutuniteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="AkimotoiteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="WadsleyiteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="TaeniteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="CoheniteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="KamaciteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="UraniauriteOreToIngot" />
+		<Entry Class="RefineryIngots" BlueprintSubtypeId="PetziteOreToIngot" />	
+
+
+	</BlueprintClassEntries>
 </Definitions>
