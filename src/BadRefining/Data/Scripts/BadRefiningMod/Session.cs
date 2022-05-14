@@ -128,13 +128,38 @@ namespace BadRefiningMod
         }
     }
 
+    public class BlueprintYieldFactor
+    {
+        public string BlueprintName;
+        public float YieldFactor;
+
+        public BlueprintYieldFactor()
+        {}
+
+        public BlueprintYieldFactor(string blueprintName, float yieldFactor)
+        {
+            BlueprintName = blueprintName;
+            YieldFactor = yieldFactor;
+        }
+    }
+
     public class ModSettings
     {
-        /*public OreConfiguration[] AsteroidOres = new OreConfiguration[] {
-            new OreConfiguration("Stone"),
-            new OreConfiguration("Iron"),
-            new OreConfiguration("Silver")
-        };*/
+        public float ProductionBlockOperationalPowerConsumptionFactor = 1.5f;
+        public float ProductionBlockStandbyPowerConsumptionFactor = 1.5f;
+
+        public float OxygenGeneratorIceConsumptionFactor = 2f;
+        public float OxygenGeneratorIceToGasRatioFactor = 0.1f;
+
+        public float OxygenFarmMaxGasOutputFactor = 2f;
+
+        public float LargeRefineryIngotYieldFactor = 0.6f;
+        public float StoneOreToIngotYieldFactor = 0.5f;
+        public float StoneOreToIngotSurvivalKitYieldFactor = 0.35f;
+
+        public BlueprintYieldFactor[] YieldFactorOverrides = new BlueprintYieldFactor[] {
+            new BlueprintYieldFactor("UraniumOreToIngot", 0.1f)
+        };
 
         public static ModSettings Load()
         {
@@ -145,11 +170,6 @@ namespace BadRefiningMod
         {
             return ModSettingsUtilities.SaveSettingsFile(settings, "Settings.xml");
         }
-        /*
-        public OreConfiguration GetAsteroidOreConfiguration(string ore)
-        {
-            return Array.Find(AsteroidOres, candidate => String.Equals(candidate.OreName, ore, StringComparison.OrdinalIgnoreCase));
-        }*/
     }
 
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
@@ -269,8 +289,8 @@ namespace BadRefiningMod
 
         private void IncreasePowerConsumptionOfProductionBlock(MyProductionBlockDefinition productionBlock)
         {
-            var operationalPowerConsumptionFactor = 1.5f;
-            var standbyPowerConsumptionFactor = 1.5f;
+            var operationalPowerConsumptionFactor = _settings.ProductionBlockOperationalPowerConsumptionFactor;
+            var standbyPowerConsumptionFactor = _settings.ProductionBlockStandbyPowerConsumptionFactor;
 
             Logger.Log("Increasing power consumption of " + productionBlock.Id);
 
@@ -304,8 +324,8 @@ namespace BadRefiningMod
 
         private void MakeOxygenGeneratorBad(MyOxygenGeneratorDefinition definition)
         {
-            var iceConsumptionFactor = 2f;
-            var iceToGasRatioFactor = 0.1f;
+            var iceConsumptionFactor = _settings.OxygenGeneratorIceConsumptionFactor;
+            var iceToGasRatioFactor = _settings.OxygenGeneratorIceToGasRatioFactor;
 
             Logger.Log("Making oxygen generator " + definition.Id + " bad");
 
@@ -335,7 +355,7 @@ namespace BadRefiningMod
 
         private void IncreaseOxygenFarmOutput()
         {
-            var oxygenFarmMaxGasOutputFactor = 2f;
+            var oxygenFarmMaxGasOutputFactor = _settings.OxygenFarmMaxGasOutputFactor;
 
             Logger.Log("Increasing oxygen farm output");
 
@@ -376,6 +396,18 @@ namespace BadRefiningMod
             );
         }
 
+        float GetYieldFactorOverrideOrDefault(string blueprintName, float defaultFactor)
+        {
+            foreach (var factorConfig in _settings.YieldFactorOverrides)
+            {
+                if (String.Equals(factorConfig.BlueprintName, blueprintName, StringComparison.OrdinalIgnoreCase))
+                {
+                    return factorConfig.YieldFactor;
+                }
+            }
+            return defaultFactor;
+        }
+
         private MyBlueprintDefinitionBase GetBlueprintByName(string blueprintName)
         {
             MyBlueprintDefinitionBase found = MyDefinitionManager.Static.GetBlueprintDefinition(
@@ -393,7 +425,7 @@ namespace BadRefiningMod
 
         private void ReduceLargeRefineryIngotYields()
         {
-            var largeRefineryIngotYieldFactor = 0.6f;
+            var largeRefineryIngotYieldFactor = _settings.LargeRefineryIngotYieldFactor;
 
             foreach (var definition in MyDefinitionManager.Static.GetBlueprintDefinitions())
             {
@@ -402,14 +434,15 @@ namespace BadRefiningMod
                     continue;
                 }
 
-                MultiplyBlueprintResultAmounts(definition, largeRefineryIngotYieldFactor);
+                float factor = GetYieldFactorOverrideOrDefault(definition.Id.SubtypeName, largeRefineryIngotYieldFactor);
+                MultiplyBlueprintResultAmounts(definition, factor);
             }
         }
 
         private void ReduceSmallRefineryIngotYields()
         {
-            MultiplyBlueprintResultAmounts(GetBlueprintByName("StoneOreToIngot"), 0.5f);
-            MultiplyBlueprintResultAmounts(GetBlueprintByName("StoneOreToIngotBasic"), 0.35f);
+            MultiplyBlueprintResultAmounts(GetBlueprintByName("StoneOreToIngot"), _settings.StoneOreToIngotYieldFactor);
+            MultiplyBlueprintResultAmounts(GetBlueprintByName("StoneOreToIngotBasic"), _settings.StoneOreToIngotSurvivalKitYieldFactor);
         }
 
 
