@@ -329,7 +329,6 @@ namespace BadRefiningMod
 
             Logger.Log("Making oxygen generator " + definition.Id + " bad");
 
-            definition.IceConsumptionPerSecond *= 2;
             _modifier.Set(
                 definition,
                 def => def.IceConsumptionPerSecond,
