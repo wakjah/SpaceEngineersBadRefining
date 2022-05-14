@@ -145,17 +145,17 @@ namespace BadRefiningMod
 
     public class ModSettings
     {
-        public float ProductionBlockOperationalPowerConsumptionFactor = 1.5f;
-        public float ProductionBlockStandbyPowerConsumptionFactor = 1.5f;
+        public float ProductionBlockOperationalPowerConsumptionFactor = 2.5f;
+        public float ProductionBlockStandbyPowerConsumptionFactor = 2.5f;
 
         public float OxygenGeneratorIceConsumptionFactor = 2f;
         public float OxygenGeneratorIceToGasRatioFactor = 0.1f;
 
         public float OxygenFarmMaxGasOutputFactor = 2f;
 
-        public float LargeRefineryIngotYieldFactor = 0.6f;
-        public float StoneOreToIngotYieldFactor = 0.5f;
-        public float StoneOreToIngotSurvivalKitYieldFactor = 0.35f;
+        public float LargeRefineryIngotYieldFactor = 0.4f;
+        public float StoneOreToIngotYieldFactor = 0.3f;
+        public float StoneOreToIngotSurvivalKitYieldFactor = 0.2f;
 
         public BlueprintYieldFactor[] YieldFactorOverrides = new BlueprintYieldFactor[] {
             new BlueprintYieldFactor("UraniumOreToIngot", 0.1f)
